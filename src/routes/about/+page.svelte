@@ -1,12 +1,6 @@
 <script>
-	let count = 0;
-
-	function handleClick() {
-		count += 1;
-	}
-    import Nested from '../lib/components/Nested.svelte';
-    import Navbar from '../lib/components/Navbar.svelte';
-    import '../styles.css';
+    import Nested from '$lib/components/Nested.svelte';
+    import Navbar from '$lib/components/Navbar.svelte';
     import { onMount } from 'svelte';
 
     onMount(() => {
@@ -18,6 +12,15 @@
     }, 1000);
 
     });
+	let count = 0;
+
+	function handleClick() {
+		count += 1;
+	}
+
+    
+
+
 </script>
 
 
@@ -32,7 +35,7 @@
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 
 <p>These styles...</p>
+
 <Navbar></Navbar>
 <Nested />
-
 
