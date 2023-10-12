@@ -1,7 +1,7 @@
 <script>
-    import Nested from '$lib/components/Nested.svelte';
-    import Navbar from '$lib/components/Navbar.svelte';
-    import { onMount } from 'svelte';
+    import Nested from '../Nested.svelte';
+    
+    /*import { onMount } from 'svelte';
 
     onMount(() => {
 
@@ -11,19 +11,18 @@
         styleBody.style.visibility = 'visible';
     }, 1000);
 
-    });
+    });*/
 	let count = 0;
 
 	function handleClick() {
 		count += 1;
 	}
-
-    
-
-
 </script>
 
-
+<svelte:head>
+	<title>About</title>
+	<meta name="description" content="About this app" />
+</svelte:head>
 <button on:click={handleClick}>
 	Clicked {count}
 	{count === 1 ? 'time' : 'times'}
@@ -36,6 +35,4 @@
 
 <p>These styles...</p>
 
-<Navbar></Navbar>
-<Nested />
 
